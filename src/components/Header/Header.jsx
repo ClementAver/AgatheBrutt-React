@@ -28,7 +28,7 @@ export default function Header() {
           label: (
             <>
               {item.label}
-              <span class="menu_bullet"> ●</span>
+              <span className="menu_bullet"> ●</span>
             </>
           ),
         };

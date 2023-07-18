@@ -226,6 +226,18 @@ a#cRetour.cVisible {
   padding: 2% 2% 2% 2%;
 }
 
+.tile {
+  position: relative;
+}
+
+.tile a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}
+
 .image {
   width: 49%;
   overflow: hidden;

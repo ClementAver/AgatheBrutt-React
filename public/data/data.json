@@ -6,7 +6,8 @@
     "summary" : "Conception des supports graphiques et gestion de la communication du studio de design toulousain Lune Bleue.",
     "date": "2020–2023",
     "tags": ["communiation", "design éditorial"],
-    "cover": "./assets/covers/agathe_brutt_lunebleue_01.jpg"
+    "cover": "./assets/covers/agathe_brutt_lunebleue_01.jpg",
+    "alt" : "to come"
     },
     {
     "id": "garona",
@@ -14,7 +15,8 @@
     "summary" : "Conception de l’identité visuelle de la fromagerie Garona : un système graphique pour donner de la visibilité et de la lisibilité à un nouveau commerce de proximité, au cœur de la ville de Seilh.",
     "date": "2023",
     "tags": ["lettrage", "identité visuelle"],
-    "cover": "./assets/covers/agathe_brutt_garona_logo.png"
+    "cover": "./assets/covers/agathe_brutt_garona_logo.png",
+    "alt" : "to come"
     },
     {
     "id": "abime",
@@ -22,7 +24,8 @@
     "summary" : "En abîme est une application invitant le lecteur à accéder à du contenu scientifique par un moyen alternatif : à travers la curiosité que suscite l’image de science.",
     "date": "2019",
     "tags": ["design éditorial", "design d'interface"],
-    "cover": "./assets/covers/agathe_brutt_enabime_07.jpg"
+    "cover": "./assets/covers/agathe_brutt_enabime_07.jpg",
+    "alt" : "to come"
     }
   ]
 }

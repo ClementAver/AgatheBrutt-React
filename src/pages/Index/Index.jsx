@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import Hero from "../../components/Hero/Hero";
 import Tile from "../../components/Tile/Tile";
 
-export default function Home() {
+export default function Index() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -14,21 +13,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="home_main">
+    <main className="index_main">
       <div className="contenu">
-        <Hero
-          title={
-            <h1 className="intro_texte">
-              Design graphique, <br />
-              design éditorial <br />& design interactif.
-            </h1>
-          }
-          labor={
-            <p className="caps">
-              Toulouse & Paris ➜ <a href="mailto:agathe.brutt@gmail.com">agathe.brutt@gmail.com</a>
-            </p>
-          }
-        />
+        <div className="intro"></div>
         {projects.map(({ id, title, summary, date, tags, cover, alt }, index) => {
           return (
             <Tile
