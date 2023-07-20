@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Hero from "../../components/Hero/Hero";
 import Tile from "../../components/Tile/Tile";
+import MediaFactory from "../../factories/MediaFactory";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
@@ -9,8 +11,31 @@ export default function Home() {
     fetch("/data/data.json")
       .then((response) => response.json())
       .then((data) => {
-        let custom = <p key="custom">Ma tuile d'animation.</p>;
-        let customIncluded = data.projets.map(({ id, title, summary, date, tags, covers, alt }, index) => {
+        let all = data.projets;
+        let custom = all.filter((projet) => projet.id === "animations")[0];
+        let key = `custom-animations`;
+        let customElement = (
+          <div
+            key={key}
+            className="home_galerie"
+          >
+            <div className="photos_trois">
+              {custom.medias.map((media, index) => {
+                let key = `animation-${index}`;
+                return (
+                  <div key={key}>
+                    <MediaFactory media={media} />
+                  </div>
+                );
+              })}
+            </div>
+            <div className="home_lien">
+              <Link to="/projects/animations">voir tous les travaux d’animation ➜</Link>
+            </div>
+          </div>
+        );
+        let customFiltered = all.filter((projet) => projet.id !== "animations");
+        let customFilteredElements = customFiltered.map(({ id, title, summary, date, tags, covers }, index) => {
           return (
             <Tile
               key={id.concat(`-${index.toString()}`)}
@@ -21,12 +46,12 @@ export default function Home() {
               date={date}
               tags={tags}
               covers={covers}
-              alt={alt}
             />
           );
         });
-        customIncluded.splice(1, 0, custom);
-        setProjects(customIncluded);
+
+        customFilteredElements.splice(1, 0, customElement);
+        setProjects(customFilteredElements);
       });
   }, []);
 

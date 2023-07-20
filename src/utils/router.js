@@ -31,6 +31,10 @@ export const router = createBrowserRouter([
             path: "/projects/lune-bleue",
             element: <Home />,
           },
+          {
+            path: "/projects/animations",
+            element: <Home />,
+          },
         ],
       },
     ],

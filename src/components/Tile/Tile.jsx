@@ -1,28 +1,35 @@
 import { Link, useLocation } from "react-router-dom";
+import MediaFactory from "../../factories/MediaFactory";
 
-export default function Tile({ id, title, summary, date, tags, covers, alt, index }) {
+export default function Tile({ id, title, summary, date, tags, covers, index }) {
   let location = useLocation();
   const path = `projects/${id}`;
 
   if (location.pathname === "/") {
     return (
-      <article
+      <div
         key={id}
         className="ligne tile"
       >
         {covers.map((cover, coverIndex) => {
           let key = `${index}-${coverIndex}`;
-          return (
-            <div
-              key={key}
-              className="image"
-            >
-              <img
-                src={cover.src}
-                alt={cover.alt}
-              />
-            </div>
-          );
+
+          if (cover.type) {
+            return (
+              <div key={key}>
+                <MediaFactory media={cover} />
+              </div>
+            );
+          } else {
+            return (
+              <div
+                key={key}
+                className="image"
+              >
+                <MediaFactory media={cover} />
+              </div>
+            );
+          }
         })}
 
         <div className="texte">
@@ -42,35 +49,42 @@ export default function Tile({ id, title, summary, date, tags, covers, alt, inde
           className="tile-link"
           to={path}
         ></Link>
-      </article>
+      </div>
     );
   } else if (location.pathname === "/index") {
     return (
-      <article
+      <div
         key={id}
         className="ligne tile"
       >
         {covers.map((cover, coverIndex) => {
-          let key = `cover-${index}-${coverIndex}`;
-          console.log(key);
-          return (
-            <div
-              key={key}
-              className="index_image"
-            >
-              <img
-                src={cover.src}
-                alt={cover.alt}
-              />
-            </div>
-          );
+          let key = `${index}-${coverIndex}`;
+
+          if (cover.type) {
+            return (
+              <div
+                key={key}
+                className="index_image"
+              >
+                <MediaFactory media={cover} />
+              </div>
+            );
+          } else {
+            return (
+              <div
+                key={key}
+                className="index_image"
+              >
+                <MediaFactory media={cover} />
+              </div>
+            );
+          }
         })}
         <div className="index_titre">
           <div className="caps">
             {tags
               .map((tag, tagIndex) => {
                 let key = `tag-${index}-${tagIndex}`;
-                console.log(key);
                 return <span key={key}>{tag} </span>;
               })
               .concat("● ")}
@@ -87,7 +101,7 @@ export default function Tile({ id, title, summary, date, tags, covers, alt, inde
           className="tile-link"
           to={path}
         ></Link>
-      </article>
+      </div>
     );
   }
 }

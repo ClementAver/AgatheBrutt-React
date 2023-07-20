@@ -8,8 +8,7 @@ export default function Index() {
     fetch("/data/data.json")
       .then((response) => response.json())
       .then((data) => {
-        let custom = <p key="custom">Ma tuile d'animation.</p>;
-        let customIncluded = data.projets.map(({ id, title, summary, date, tags, covers, alt }, index) => {
+        let all = data.projets.map(({ id, title, summary, date, tags, covers }, index) => {
           return (
             <Tile
               key={id.concat(`-${index.toString()}`)}
@@ -19,13 +18,11 @@ export default function Index() {
               summary={summary}
               date={date}
               tags={tags}
-              covers={covers}
-              alt={alt}
+              covers={[covers[0]]}
             />
           );
         });
-        customIncluded.splice(1, 0, custom);
-        setProjects(customIncluded);
+        setProjects(all);
       });
   }, []);
 

@@ -8,7 +8,7 @@
       "tags": ["communication", "design éditorial"],
       "covers": [
         {
-          "src":"./assets/covers/agathe_brutt_lunebleue_01.jpg", 
+          "src":"agathe_brutt_lunebleue_01.jpg", 
           "alt": "to come"
         }
       ]
@@ -21,7 +21,7 @@
       "tags": ["lettrage", "identité visuelle"],
       "covers": [
         {
-          "src":"./assets/covers/agathe_brutt_garona_logo.png", 
+          "src":"agathe_brutt_garona_logo.png", 
           "alt": "to come"
         }
       ]
@@ -34,8 +34,35 @@
       "tags": ["design éditorial", "design d'interface"],
       "covers": [
         {
-          "src":"./assets/covers/agathe_brutt_enabime_07.jpg", 
+          "src":"agathe_brutt_enabime_07.jpg", 
           "alt": "to come"
+        }
+      ]
+    },
+    {
+      "id": "animations",
+      "title" : "Animations",
+      "summary" : "Travaux d’animation divers, réalisés sur le logiciel After Effects.",
+      "date": "2019–",
+      "tags": ["animation"],
+      "covers": [ 
+        {
+          "src":"fleur-preview.mp4",
+          "type": "video/mp4"
+        }
+      ],
+      "medias": [
+        {
+          "src":"soleil.mp4",
+          "type": "video/mp4"
+        },
+        {
+          "src":"cœur.mp4", 
+          "type": "video/mp4"
+        },
+        {
+          "src":"fleur.mp4",
+          "type": "video/mp4"
         }
       ]
     }
