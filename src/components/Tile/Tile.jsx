@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 
-export default function Tile({ id, title, summary, date, tags, cover, alt, index }) {
+export default function Tile({ id, title, summary, date, tags, covers, alt, index }) {
   let location = useLocation();
-  const path = `/${id}`;
+  const path = `projects/${id}`;
 
   if (location.pathname === "/") {
     return (
@@ -10,19 +10,26 @@ export default function Tile({ id, title, summary, date, tags, cover, alt, index
         key={id}
         className="ligne tile"
       >
-        <figure className="image">
-          <img
-            src={cover}
-            alt={alt}
-          />
-        </figure>
+        {covers.map((cover, coverIndex) => {
+          let key = `${index}-${coverIndex}`;
+          return (
+            <div
+              key={key}
+              className="image"
+            >
+              <img
+                src={cover.src}
+                alt={cover.alt}
+              />
+            </div>
+          );
+        })}
 
         <div className="texte">
           <div className="caps">
             {tags
               .map((tag, tagIndex) => {
                 let key = `${index}-${tagIndex}`;
-                console.log(key);
                 return <span key={key}>{tag} </span>;
               })
               .concat("● ")}
@@ -43,18 +50,26 @@ export default function Tile({ id, title, summary, date, tags, cover, alt, index
         key={id}
         className="ligne tile"
       >
-        <div className="index_image">
-          <img
-            src={cover}
-            alt={alt}
-          />
-        </div>
-
+        {covers.map((cover, coverIndex) => {
+          let key = `cover-${index}-${coverIndex}`;
+          console.log(key);
+          return (
+            <div
+              key={key}
+              className="index_image"
+            >
+              <img
+                src={cover.src}
+                alt={cover.alt}
+              />
+            </div>
+          );
+        })}
         <div className="index_titre">
           <div className="caps">
             {tags
               .map((tag, tagIndex) => {
-                let key = `${index}-${tagIndex}`;
+                let key = `tag-${index}-${tagIndex}`;
                 console.log(key);
                 return <span key={key}>{tag} </span>;
               })

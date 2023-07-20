@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom";
+
 export default function Project() {
-  return <h1>Project</h1>;
+  return <Outlet />;
 }
