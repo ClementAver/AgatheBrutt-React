@@ -68,6 +68,22 @@ h3 {
   padding-bottom: 30px;
 }
 
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 /*------------ HEADER ------------*/
 
 header {
@@ -220,7 +236,7 @@ a#cRetour.cVisible {
 .ligne {
   width: 96%;
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
   flex-wrap: wrap;
   padding: 2% 2% 2% 2%;
 }
@@ -240,6 +256,7 @@ a#cRetour.cVisible {
 .image {
   width: 49%;
   overflow: hidden;
+  margin-right: 19%;
 }
 
 .texte {
@@ -370,6 +387,7 @@ a#cRetour.cVisible {
 .index_image {
   width: 23.5%;
   overflow: hidden;
+  margin-right: 2%;
 }
 
 .index_image img,
@@ -388,6 +406,7 @@ a#cRetour.cVisible {
 
 .index_titre {
   width: 23.5%;
+  margin-right: 2%;
 }
 
 .index_description {
@@ -577,6 +596,7 @@ a#cRetour.cVisible {
 
   .image {
     min-height: 350px;
+    margin-right: 2%;
   }
 
   .image img {
@@ -698,6 +718,7 @@ a#cRetour.cVisible {
   .image {
     width: 100%;
     min-height: auto;
+    margin-right: 0%;
   }
 
   .texte {
@@ -722,8 +743,13 @@ a#cRetour.cVisible {
 
   /*------------ CONTENU INDEX ------------*/
 
+  .index_image {
+    margin-right: 3%;
+  }
+
   .index_titre {
     width: 73.5%;
+    margin-right: 0;
   }
 
   /*------------ CONTENU PROJETS ------------*/

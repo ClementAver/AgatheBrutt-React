@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Tile from "../../components/Tile/Tile";
+import Tile from "../../components/Tiles/IndexTile";
 
 export default function Index() {
   const [projects, setProjects] = useState([]);

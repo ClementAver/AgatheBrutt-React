@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Hero from "../../components/Hero/Hero";
-import Tile from "../../components/Tile/Tile";
+import Tile from "../../components/Tiles/HomeTile";
 import MediaFactory from "../../factories/MediaFactory";
 import { Link } from "react-router-dom";
 
