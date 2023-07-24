@@ -1,5 +1,5 @@
 export default function Video({ src, type }) {
-  let url = () => `assets/videos/${src}`;
+  let url = () => `/assets/videos/${src}`;
 
   return (
     <video

@@ -1,5 +1,5 @@
 export default function Image({ src, alt }) {
-  let url = () => `assets/images/${src}`;
+  let url = () => `/assets/images/${src}`;
 
   return (
     <img

@@ -22,8 +22,6 @@ export default function IntroProject({ title, summary, date, tags, furtherInform
           console.log(key);
           return (
             <Fragment key={key}>
-              {" "}
-              {/* Added the key to the enclosing fragment */}
               <span>{info}</span>
               <br />
             </Fragment>
