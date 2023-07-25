@@ -740,5 +740,8 @@ a#cRetour.cVisible {
     margin: 0;
   }
 }
+.smooth {
+  scroll-behavior: smooth;
+}
 
 /*# sourceMappingURL=style.css.map */
