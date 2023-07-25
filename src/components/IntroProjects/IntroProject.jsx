@@ -11,7 +11,6 @@ export default function IntroProject({ title, summary, date, tags, furtherInform
       <p className="caps">
         {tags.map((tag, index) => {
           let key = `tag-${index}`;
-          console.log(key);
           return index !== 0 ? <span key={key}>, {tag}</span> : <span key={key}>{tag}</span>;
         })}
         {" ● "}
@@ -19,7 +18,6 @@ export default function IntroProject({ title, summary, date, tags, furtherInform
         <br />
         {furtherInformation.map((info, index) => {
           let key = `further-${index}`;
-          console.log(key);
           return (
             <Fragment key={key}>
               <span>{info}</span>

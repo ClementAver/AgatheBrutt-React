@@ -1,58 +1,17 @@
 import { useEffect, useState } from "react";
 import Hero from "../../components/Hero/Hero";
 import Tile from "../../components/Tiles/HomeTile";
-import MediaFactory from "../../factories/MediaFactory";
-import { Link } from "react-router-dom";
+import { projects } from "../../data/data";
+import HomeAnimations from "../../components/HomeAnimations/HomeAnimations";
 
 export default function Home() {
-  const [projects, setProjects] = useState([]);
+  const [processed, setProcessed] = useState([]);
 
   useEffect(() => {
-    fetch("/data/data.json")
-      .then((response) => response.json())
-      .then((data) => {
-        let all = data.projets;
-        let custom = all.filter((projet) => projet.id === "animations")[0];
-        let key = `custom-animations`;
-        let customElement = (
-          <div
-            key={key}
-            className="home_galerie"
-          >
-            <div className="photos_trois">
-              {custom.medias.map((media, index) => {
-                let key = `animation-${index}`;
-                return (
-                  <div key={key}>
-                    <MediaFactory media={media} />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="home_lien">
-              <Link to="/projects/animations">voir tous les travaux d’animation ➜</Link>
-            </div>
-          </div>
-        );
-        let customFiltered = all.filter((projet) => projet.id !== "animations");
-        let customFilteredElements = customFiltered.map(({ id, title, summary, date, tags, covers }, index) => {
-          return (
-            <Tile
-              key={id.concat(`-${index.toString()}`)}
-              index={index}
-              id={id}
-              title={title}
-              summary={summary}
-              date={date}
-              tags={tags}
-              covers={covers}
-            />
-          );
-        });
-
-        customFilteredElements.splice(1, 0, customElement);
-        setProjects(customFilteredElements);
-      });
+    const animations = projects.filter((project) => project.id === "animations")[0];
+    const projectsFiltered = projects.filter((project) => project.id !== "animations");
+    projectsFiltered.splice(1, 0, animations);
+    setProcessed(projectsFiltered);
   }, []);
 
   return (
@@ -71,7 +30,26 @@ export default function Home() {
             </p>
           }
         />
-        {projects.map((project) => project)}
+        {processed.map((project, index) =>
+          project.id !== "animations" ? (
+            <Tile
+              key={project.id.concat(`-${index.toString()}`)}
+              index={index}
+              id={project.id}
+              title={project.title}
+              summary={project.summary}
+              date={project.date}
+              tags={project.tags}
+              covers={project.covers}
+            />
+          ) : (
+            <HomeAnimations
+              key={project.id.concat(`-${index.toString()}`)}
+              index={"custom-0"}
+              project={project}
+            />
+          )
+        )}
       </div>
     </main>
   );

@@ -4,7 +4,7 @@ import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
 import Index from "../pages/Index/Index";
 import Project from "../pages/Project/Project";
-import LuneBleue from "../pages/LuneBleue/LuneBleue";
+import LuneBleue from "../pages/projects/LuneBleue/LuneBleue";
 
 export const router = createBrowserRouter([
   {

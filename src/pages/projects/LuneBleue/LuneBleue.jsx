@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import IntroProject from "../../components/IntroProjects/IntroProject";
 import { Link } from "react-router-dom";
+import { projects } from "../../../data/data";
+import IntroProject from "../../../components/IntroProjects/IntroProject";
 
 export default function LuneBleue() {
   const [project, setProject] = useState(null);
@@ -10,12 +11,8 @@ export default function LuneBleue() {
   const furtherInformation = ["sous la direction artistique de Thomas Guillaumot", <Link to="https://lunebleue.coop/">lunebleue.coop</Link>];
 
   useEffect(() => {
-    fetch("/data/data.json")
-      .then((response) => response.json())
-      .then((data) => {
-        let project = data.projets.filter((project) => (project.id = id))[0];
-        setProject(project);
-      });
+    let project = projects.filter((project) => project.id === id)[0];
+    setProject(project);
   }, []);
 
   if (project !== null) {
