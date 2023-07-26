@@ -1,15 +1,12 @@
 import { Link } from "react-router-dom";
 import MediaFactory from "../../factories/MediaFactory";
 
-export default function HomeAnimations({ index, project }) {
+export default function HomeAnimations({ project }) {
   return (
-    <div
-      key={index}
-      className="home_galerie"
-    >
+    <div className="home_galerie">
       <div className="photos_trois">
-        {project.medias.map((media, mediaIndex) => {
-          let key = `animation-${mediaIndex}`;
+        {project.medias.map((media, index) => {
+          let key = `animation-${index}`;
           return (
             <div key={key}>
               <MediaFactory media={media} />

@@ -34,7 +34,6 @@ export default function Home() {
           project.id !== "animations" ? (
             <Tile
               key={project.id.concat(`-${index.toString()}`)}
-              index={index}
               id={project.id}
               title={project.title}
               summary={project.summary}
@@ -45,7 +44,6 @@ export default function Home() {
           ) : (
             <HomeAnimations
               key={project.id.concat(`-${index.toString()}`)}
-              index={"custom-0"}
               project={project}
             />
           )

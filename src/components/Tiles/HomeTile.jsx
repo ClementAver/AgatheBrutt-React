@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import MediaFactory from "../../factories/MediaFactory";
 
-export default function Tile({ id, title, summary, date, tags, covers, index }) {
+export default function Tile({ id, title, summary, date, tags, covers }) {
   const path = `projects/${id}`;
 
   return (
@@ -10,7 +10,7 @@ export default function Tile({ id, title, summary, date, tags, covers, index }) 
       className="ligne tile"
     >
       {covers.map((cover, coverIndex) => {
-        let key = `${index}-${coverIndex}`;
+        let key = `cover-${coverIndex}`;
 
         if (cover.type) {
           return (
@@ -34,7 +34,7 @@ export default function Tile({ id, title, summary, date, tags, covers, index }) 
         <div className="caps">
           {tags
             .map((tag, tagIndex) => {
-              let key = `tag-${index}-${tagIndex}`;
+              let key = `tag-${tagIndex}`;
               if (tagIndex !== 0) {
                 return <span key={key}>, {tag}</span>;
               }

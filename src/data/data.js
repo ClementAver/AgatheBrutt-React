@@ -8,7 +8,41 @@ const projects = [
     covers: [
       {
         src: "agathe_brutt_lunebleue_01.jpg",
-        alt: "to come",
+        alt: "",
+      },
+    ],
+    medias: [
+      {
+        src: "agathe_brutt_lunebleue_supports.png",
+        alt: "",
+      },
+      {
+        src: "agathe_brutt_lunebleue_pages.gif",
+        alt: "",
+      },
+      {
+        src: "agathe_brutt_LuneBleue-cartevoeux2023.mp4",
+        type: "video/mp4",
+      },
+      {
+        src: "agathe_brutt_lunebleue_depliant_recto.png",
+        alt: "",
+      },
+      {
+        src: "agathe_brutt_lunebleue_depliant_verso.png",
+        alt: "",
+      },
+      {
+        src: "agathe_brutt_lunebleue_depliant_photo.png",
+        alt: "",
+      },
+      {
+        src: "agathe_brutt_lunebleue_slides.png",
+        alt: "",
+      },
+      {
+        src: "agathe_brutt_lunebleue_livret.gif",
+        alt: "",
       },
     ],
   },
@@ -21,7 +55,7 @@ const projects = [
     covers: [
       {
         src: "agathe_brutt_garona_logo.png",
-        alt: "to come",
+        alt: "",
       },
     ],
   },
@@ -34,7 +68,7 @@ const projects = [
     covers: [
       {
         src: "agathe_brutt_enabime_07.jpg",
-        alt: "to come",
+        alt: "",
       },
     ],
   },

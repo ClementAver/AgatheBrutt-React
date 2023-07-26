@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { projects } from "../../../data/data";
 import IntroProject from "../../../components/IntroProjects/IntroProject";
 import PageStart from "../../../components/PageStart/PageStart";
+import Media from "../../../layouts/Media/Media";
+import Index from "../../../components/Index/Index";
 
 export default function LuneBleue() {
   const [project, setProject] = useState(null);
@@ -28,15 +30,36 @@ export default function LuneBleue() {
               tags={project.tags}
               furtherInformation={furtherInformation}
             />
-
-            <div className="intro"></div>
-            <div className="intro"></div>
-            <div className="intro"></div>
-            <div className="intro"></div>
-            <div className="intro"></div>
+            <div className="photos">
+              <Media
+                customClass="deux"
+                children={[project.medias[0], project.medias[1]]}
+              />
+              <Media
+                customClass="une"
+                children={[project.medias[2]]}
+              />
+              <Media
+                customClass="deux"
+                children={[project.medias[3], project.medias[4]]}
+              />
+              <Media
+                customClass="deux_droite"
+                children={[project.medias[5]]}
+              />
+              <Media
+                customClass="une"
+                children={[project.medias[6]]}
+              />
+              <Media
+                customClass="deux"
+                children={[project.medias[7]]}
+              />
+            </div>
           </div>
         </main>
         <PageStart />
+        <Index />
       </>
     );
   }

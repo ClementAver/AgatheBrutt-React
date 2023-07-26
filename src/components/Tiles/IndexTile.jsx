@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import MediaFactory from "../../factories/MediaFactory";
 
-export default function Tile({ id, title, summary, date, tags, covers, index }) {
-  const path = `projects/${id}`;
+export default function Tile({ id, title, summary, date, tags, covers }) {
+  const path = `../projects/${id}`;
 
   return (
     <div
       key={id}
       className="ligne tile"
     >
-      {covers.map((cover, coverIndex) => {
-        let key = `${index}-${coverIndex}`;
+      {covers.map((cover, index) => {
+        let key = `cover-${index}`;
 
         if (cover.type) {
           return (
@@ -35,9 +35,9 @@ export default function Tile({ id, title, summary, date, tags, covers, index }) 
       <div className="index_titre">
         <div className="caps">
           {tags
-            .map((tag, tagIndex) => {
-              let key = `tag-${index}-${tagIndex}`;
-              if (tagIndex !== 0) {
+            .map((tag, index) => {
+              let key = `tag-${index}`;
+              if (index !== 0) {
                 return <span key={key}>, {tag}</span>;
               }
               return <span key={key}>{tag}</span>;
