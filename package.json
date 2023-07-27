@@ -26,7 +26,8 @@
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build"
   },
-  "homepage": "https://github.com/ClementAver/AgatheBrutt-React",
+  "homepage": "http://ClementAver.github.io/AgatheBrutt-React",
+
   "eslintConfig": {
     "extends": [
       "react-app",
