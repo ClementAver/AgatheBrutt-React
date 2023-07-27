@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ClementAver.github.io/AgatheBrutt-React",
   "name": "agathe-brutt",
   "version": "0.1.0",
   "private": true,
@@ -23,10 +24,8 @@
     "eject": "react-scripts eject",
     "sass": "sass --watch src/main.scss:public/css/style.css",
     "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/",
-    "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build"
   },
-  "homepage": "http://ClementAver.github.io/AgatheBrutt-React",
 
   "eslintConfig": {
     "extends": [
