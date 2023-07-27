@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import MediaFactory from "../../factories/MediaFactory";
 
 export default function Tile({ id, title, summary, date, tags, covers }) {
-  const path = `../projects/${id}`;
+  const path = `../project/${id}`;
 
   return (
     <div
