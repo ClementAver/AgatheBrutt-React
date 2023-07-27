@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/AgatheBrutt-React/static/js/main.c151b841.js",
+    "main.js": "/AgatheBrutt-React/static/js/main.82891e07.js",
     "static/js/787.17712d65.chunk.js": "/AgatheBrutt-React/static/js/787.17712d65.chunk.js",
     "index.html": "/AgatheBrutt-React/index.html",
-    "main.c151b841.js.map": "/AgatheBrutt-React/static/js/main.c151b841.js.map",
+    "main.82891e07.js.map": "/AgatheBrutt-React/static/js/main.82891e07.js.map",
     "787.17712d65.chunk.js.map": "/AgatheBrutt-React/static/js/787.17712d65.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.c151b841.js"
+    "static/js/main.82891e07.js"
   ]
 }
