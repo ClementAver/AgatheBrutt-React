@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/ClementAver/AgatheBrutt-React/static/js/main.94b7d7cd.js",
+    "main.js": "/ClementAver/AgatheBrutt-React/static/js/main.853d4011.js",
     "static/js/787.17712d65.chunk.js": "/ClementAver/AgatheBrutt-React/static/js/787.17712d65.chunk.js",
     "index.html": "/ClementAver/AgatheBrutt-React/index.html",
-    "main.94b7d7cd.js.map": "/ClementAver/AgatheBrutt-React/static/js/main.94b7d7cd.js.map",
+    "main.853d4011.js.map": "/ClementAver/AgatheBrutt-React/static/js/main.853d4011.js.map",
     "787.17712d65.chunk.js.map": "/ClementAver/AgatheBrutt-React/static/js/787.17712d65.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.94b7d7cd.js"
+    "static/js/main.853d4011.js"
   ]
 }
