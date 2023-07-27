@@ -2,7 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { HashRouter as Router } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-import App from "./";
+import App from "./App";
 
 createRoot(document.getElementById("root")).render(
   <Router>
