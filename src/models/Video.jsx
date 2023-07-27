@@ -1,5 +1,5 @@
 export default function Video({ src, type }) {
-  let url = () => `%PUBLIC_URL%/assets/videos/${src}`;
+  let url = () => `https://clementaver.github.io/AgatheBrutt-React/assets/videos/${src}`;
 
   return (
     <video
